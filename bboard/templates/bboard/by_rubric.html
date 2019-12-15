@@ -1,0 +1,15 @@
+{% extends 'layout/basic.html' %}
+
+{% block title %}
+    <h2>Рубрика: {{ current_rubric.name }} </h2>
+{% endblock %}
+{% block content %}
+    <h2>Рубрика: {{ current_rubric.name }}</h2>
+{% for bb in bbs %}
+<div>
+    <h2>{{ bb.title }}</h2>
+    <p>{{ bb.content }}</p>
+    <p>{{ bb.puЬlished|date:"%b %d %У %H:%M:%S" }}</p>
+</div>
+{% endfor %}
+{% endblock content %}
